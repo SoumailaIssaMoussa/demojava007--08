@@ -1,63 +1,41 @@
-/* ===== Racine avec dégradé profond ===== */
-/* Bordure translucide pour relief */
--fx-border-color: rgba(255,255,255,0.25);
--fx-border-width: 1;
--fx-border-radius: 16;
--fx-cursor: hand;
--fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 18, 0.2, 0, 10);
--fx-opacity: 0.98;
+/* menu.css - Modern UI with Gradient Background */
+
+/* Background du menu */
+.root {
+    -fx-background-color: linear-gradient(
+        to bottom right,
+        rgba(255, 165, 0, 0.2), /* orange avec 20% opacité */
+        rgba(255, 105, 180, 0.2) /* rose avec 20% opacité */
+    );
+    -fx-padding: 15;
 }
 
-
-/* Variante primaire (bleu/cyan) */
-.gradient-button.primary {
--fx-background-color:
-linear-gradient(to bottom right, #38bdf8, #2563eb), /* couche principale */
-linear-gradient(to bottom, rgba(255,255,255,0.20), rgba(255,255,255,0.05)); /* gloss subtil */
+/* Boutons de menu */
+.button {
+    -fx-background-color: rgba(255, 255, 255, 0.8); /* fond blanc semi-transparent */
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #eeeeee;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+    -fx-padding: 10 20 10 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 5, 0, 0, 2);
+    -fx-transition: all 0.2s ease-in-out;
 }
 
-
-/* Variante secondaire (violet/rose) */
-.gradient-button.secondary {
--fx-background-color:
-linear-gradient(to bottom right, #a78bfa, #ec4899),
-linear-gradient(to bottom, rgba(255,255,255,0.20), rgba(255,255,255,0.05));
+.button:hover {
+    -fx-background-color: rgba(255, 255, 255, 1); /* plus opaque au survol */
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.12), 8, 0, 0, 3);
 }
 
-
-/* Hover: léger zoom, glow et shift du dégradé */
-.gradient-button:hover {
--fx-effect: dropshadow(gaussian, rgba(56,189,248,0.45), 30, 0.35, 0, 4);
--fx-translate-y: -1;
--fx-scale-x: 1.015;
--fx-scale-y: 1.015;
-}
-.gradient-button.primary:hover {
--fx-background-color: linear-gradient(to bottom right, #60a5fa, #22d3ee),
-linear-gradient(to bottom, rgba(255,255,255,0.22), rgba(255,255,255,0.06));
-}
-.gradient-button.secondary:hover {
--fx-background-color: linear-gradient(to bottom right, #c084fc, #f472b6),
-linear-gradient(to bottom, rgba(255,255,255,0.22), rgba(255,255,255,0.06));
-}
-
-
-/* Pressed: feedback immédiat */
-.gradient-button:pressed {
--fx-translate-y: 0;
--fx-scale-x: 0.995;
--fx-scale-y: 0.995;
--fx-effect: dropshadow(gaussian, rgba(0,0,0,0.45), 26, 0.3, 0, 6);
-}
-
-
-/* Focus ring accessible */
-.gradient-button:focused {
--fx-effect: dropshadow(gaussian, rgba(59,130,246,0.65), 24, 0.4, 0, 0);
-}
-
-
-/* Optimisations d'icônes */
-.image-view {
--fx-opacity: 0.95;
+/* Labels du menu */
+.label {
+    -fx-font-size: 15px;
+    -fx-text-fill: #222222;
+    -fx-font-weight: 500;
 }

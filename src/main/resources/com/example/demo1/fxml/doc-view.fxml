@@ -2,6 +2,15 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.DocController">
-    <ListView fx:id="docListView" prefWidth="600" prefHeight="400"/>
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.demo1.DocController"
+      stylesheets="@css/doc.css"
+      spacing="10"
+      style="-fx-background-color: #f5f5f5; -fx-padding: 10;"
+      prefWidth="800" prefHeight="600">
+
+    <!-- La ListView prendra tout l'espace disponible -->
+    <ListView fx:id="docListView"
+              VBox.vgrow="ALWAYS"
+              style="-fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #cccccc; -fx-border-width: 1;"/>
 </VBox>

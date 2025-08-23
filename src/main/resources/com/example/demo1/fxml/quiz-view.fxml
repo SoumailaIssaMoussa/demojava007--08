@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
 
-<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.QuizController">
-    <ListView fx:id="quizListView" prefWidth="600" prefHeight="400"/>
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.demo1.QuizController"
+      stylesheets="@css/quiz.css"
+      spacing="20"
+      alignment="CENTER"
+      style="-fx-background-color: #f5f5f5; -fx-padding: 30;"
+      prefWidth="800" prefHeight="600">
+
+    <!-- Question -->
+    <Label fx:id="questionLabel" text="Question will appear here" wrapText="true" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <!-- Suggestions -->
+    <HBox spacing="15" alignment="CENTER">
+        <Button fx:id="optionA" text="Option A" onAction="#handleAnswer"/>
+        <Button fx:id="optionB" text="Option B" onAction="#handleAnswer"/>
+    </HBox>
+    <HBox spacing="15" alignment="CENTER">
+        <Button fx:id="optionC" text="Option C" onAction="#handleAnswer"/>
+        <Button fx:id="optionD" text="Option D" onAction="#handleAnswer"/>
+    </HBox>
+
+    <!-- Feedback -->
+    <Label fx:id="feedbackLabel" text="" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
 </VBox>
