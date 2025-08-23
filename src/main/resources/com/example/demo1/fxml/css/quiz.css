@@ -1,0 +1,26 @@
+/* Quiz View Styles */
+.list-view {
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+}
+
+.list-cell {
+    -fx-padding: 8 10 8 10;
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+    -fx-font-weight: bold;
+}
+
+.list-cell:hover {
+    -fx-background-color: #e8f0fe;
+    -fx-cursor: hand;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}

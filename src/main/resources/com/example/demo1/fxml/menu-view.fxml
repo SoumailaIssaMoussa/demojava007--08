@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo1.MenuController"
+           stylesheets="@css/menu.css" styleClass="root-pane">
+    <!-- Glass card centré -->
+    <VBox alignment="CENTER" spacing="28" styleClass="glass-card">
+        <padding>
+            <Insets top="36" right="40" bottom="36" left="40"/>
+        </padding>
+
+
+        <!-- Titre + sous-titre -->
+        <VBox alignment="CENTER" spacing="6">
+            <Label text="Quiz Master" styleClass="title"/>
+            <Label text="Choisissez une action pour commencer" styleClass="subtitle"/>
+        </VBox>
+
+
+        <!-- Zone boutons -->
+        <HBox spacing="20" alignment="CENTER">
+            <!-- Bouton Start -->
+            <Button fx:id="btnStart" text="Démarrer" onAction="#openQuiz" styleClass="gradient-button primary">
+                <graphic>
+                    <ImageView fitHeight="26" fitWidth="26" preserveRatio="true" smooth="true">
+                        <image>
+                            <Image url="@../images/play.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+
+            <!-- Bouton Documentation -->
+            <Button fx:id="btnDoc" text="Documentaire" onAction="#openDocumentation" styleClass="gradient-button secondary">
+                <graphic>
+                    <ImageView fitHeight="26" fitWidth="26" preserveRatio="true" smooth="true">
+                        <image>
+                            <Image url="@../images/book.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </HBox>
+    </VBox>
+</StackPane>
+

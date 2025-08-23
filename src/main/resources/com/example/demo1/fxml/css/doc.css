@@ -1,0 +1,26 @@
+/* Documentation View Styles */
+.list-view {
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-background-color: #fcfcfc;
+    -fx-border-color: #bbbbbb;
+    -fx-border-width: 1;
+}
+
+.list-cell {
+    -fx-padding: 12 10 12 10;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 0 0 1 0;
+    -fx-font-style: italic;
+}
+
+.list-cell:hover {
+    -fx-background-color: #fff8e1;
+    -fx-cursor: hand;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #222222;
+}
